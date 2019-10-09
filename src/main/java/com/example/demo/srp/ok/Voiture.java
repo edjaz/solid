@@ -9,8 +9,8 @@ public class Voiture {
     public Voiture() {
         state = CarState.STOPPED;
         tableauDeBord = new TableauDeBord();
-        tableauDeBord.add(new Capteur<>(100, CapteurType.FUEL));
-        tableauDeBord.add(new Capteur<>(2.6, CapteurType.PRESSURE));
+        tableauDeBord.add(new FuelCapteur(100));
+        tableauDeBord.add(new PressureCapteur(2.6));
     }
 
     public CarState getState() {
